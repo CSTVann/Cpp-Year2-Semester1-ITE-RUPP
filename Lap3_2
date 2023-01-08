@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int array[10], array_size=7, i, number, j, found=0;
+    cout <<"Enter 10 Array Elements: " <<endl;
+    for (i=0; i<array_size; i++)
+    {
+        cin >> array[i];
+    }
+    cout<<"Enter the number to delete: ";
+    cin >>number;
+    for(i=0; i<array_size; i++)
+    {
+        if(array[i]==number)
+        {
+            for(j=i; j<(array_size-1); j++)
+            array[j] = array[j+1];
+            found++;
+            i--;
+            array_size--;
+        }
+    }
+    if(found==0)
+    cout <<"Number doesn't found in the array";
+    else
+    cout<<"Number deleted Successfully" <<endl;
+    cout<<"The array that select " <<number <<" : ";
+    for (i=0; i<array_size; i++)
+    {
+        cout<< array[i] <<" ";
+    }
+    cout <<endl;
+    return 0;
+}
