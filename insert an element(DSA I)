@@ -1,0 +1,5 @@
+void insert_elem(int arr[], int size_arr, int user_num, int pos) {
+    arr[pos - 1] = user_num;
+    cout << "Success!" << endl << "New array: ";
+    print_arr(arr, size_arr);
+}
